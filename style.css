@@ -12,6 +12,11 @@ body {
   font-family: sans-serif;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
 /**
 * ! style rules for form section
 **/
@@ -20,27 +25,16 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 400px;
-  margin: 0 auto;
-
+  width: 45%;
+  /* max-width: 400px; */
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   padding: 50px;
 }
 
-/**
-* ! style rules for title
-**/
 .title {
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 20px;
-  align-items: center;
-  text-align: center;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
 }
 
 form div input {
@@ -52,12 +46,30 @@ form div input {
   padding: 0 30px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
 form div {
   position: relative;
   margin-bottom: 15px;
 }
+
 input:focus {
   border: 2px solid #f2796e;
+}
+
+/**
+* ! style rules for social section
+**/
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
 }
 
 /**
@@ -69,25 +81,29 @@ form div i {
   padding: 10px;
 }
 
-.failure-icon,
-.error {
-  color: red;
-}
-.success-icon {
-  color: green;
-}
-.error {
-  font-size: 14.5px;
-  margin-top: 5px;
-}
-
 .success-icon,
 .failure-icon {
   right: 0;
   opacity: 0;
 }
 
-/* Style rules for submit btn */
+.failure-icon,
+.error {
+  color: red;
+}
+
+.success-icon {
+  color: green;
+}
+
+.error {
+  font-size: 14.5px;
+  margin-top: 5px;
+}
+
+/**
+* ! style rules for button 
+**/
 
 button {
   margin-top: 15px;
@@ -107,6 +123,10 @@ button:hover {
   opacity: 0.8;
 }
 
+/**
+* ! Media Queries for responsiveness
+**/
+
 @media (max-width: 900px) {
   .container {
     flex-direction: column;
@@ -119,9 +139,6 @@ button:hover {
 
   .btn {
     flex-direction: column;
-  }
-  .image {
-    height: 70vh;
   }
 }
 
