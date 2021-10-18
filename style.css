@@ -147,3 +147,14 @@ button:hover {
     padding: 20px;
   }
 }
+
+/**
+* ! style rules for social section
+**/
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+}
